@@ -5,16 +5,21 @@ using UnityEngine;
 public class FloorSpawner : MonoBehaviour
 {
     public Transform SpawnPos;
+
     public GameObject floor;
+    public GameObject cloneFloor;
 
     public Transform floorCheck;
     public float floorDistance = -5f;
     public LayerMask floorMask;
     bool isFloorExist;
+    bool isFloorFar;
+
+
 
     void CreateFloor()
     {
-        Instantiate(floor, SpawnPos.position, SpawnPos.rotation);
+       cloneFloor = Instantiate(floor, SpawnPos.position, SpawnPos.rotation);
     }
 
     void Start()
@@ -25,9 +30,10 @@ public class FloorSpawner : MonoBehaviour
     void Update()
     {
         isFloorExist = Physics.CheckSphere(floorCheck.position, floorDistance, floorMask);
-        if (!isFloorExist) {
+        if (!isFloorExist) 
+        {
             CreateFloor();
         }
-        
+
     }
 }

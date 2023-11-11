@@ -596,8 +596,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1002281028}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.28360793, y: -0.0816697, z: 0.008995973, w: 0.9554139}
-  m_LocalPosition: {x: 2.1, y: 8.62, z: -8.94}
+  m_LocalRotation: {x: 0.3643396, y: -0.04617949, z: 0.00045056827, w: 0.9301204}
+  m_LocalPosition: {x: 1.5, y: 11.1, z: -7.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -734,8 +734,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1005773185}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.28360793, y: -0.0816697, z: 0.008995973, w: 0.9554139}
-  m_LocalPosition: {x: 2.1, y: 8.62, z: -8.94}
+  m_LocalRotation: {x: 0.3643396, y: -0.04617949, z: 0.00045056827, w: 0.9301204}
+  m_LocalPosition: {x: 1.5, y: 11.1, z: -7.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -744,7 +744,7 @@ Transform:
   - {fileID: 611233374}
   - {fileID: 1722686754}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 42.672, y: -6.684, z: -2.558}
 --- !u!114 &1005773188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -758,7 +758,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1363511681}
-  offset: {x: 2.1, y: 8.62, z: -8.94}
+  offset: {x: 1.5, y: 11.1, z: -7.5}
   yPosition: 8.62
 --- !u!1 &1053713200
 GameObject:
@@ -1249,6 +1249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawnPos: {fileID: 1551281834}
   floor: {fileID: 5743603172719837096, guid: 0688808edd4187346b9e8db34bdd28a7, type: 3}
+  cloneFloor: {fileID: 5743603172719837096, guid: 0688808edd4187346b9e8db34bdd28a7, type: 3}
   floorCheck: {fileID: 1551281834}
   floorDistance: -5
   floorMask:
