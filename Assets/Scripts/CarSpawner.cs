@@ -6,31 +6,41 @@ public class CarSpawner : MonoBehaviour
 {
     public Transform CarPos;
     public GameObject car;
+    public GameObject car2;
+    public GameObject car3;
     public GameObject cloneCar;
 
-    public float delay;
     public float destroyDelay = 5;
     float timer;
-
+    
     void SpawnCar()
     {
-       cloneCar = Instantiate(car, CarPos.position, CarPos.rotation);
+        float carNumber = Random.value;
+        if ( carNumber < 0.33f )
+            cloneCar = Instantiate(car, CarPos.position, CarPos.rotation);
+       if (carNumber > 0.33f && carNumber < 0.66f)
+            cloneCar = Instantiate(car2, CarPos.position, CarPos.rotation);
+       if (carNumber > 0.66f)
+            cloneCar = Instantiate(car3, CarPos.position, CarPos.rotation);
     }
 
     void Start()
     {
-       // SpawnCar();
+
     }
 
     void Update()
     {
+        float delay = 50000 * Random.value;
         timer += Time.deltaTime;
-        if (timer > (10000 * Random.value))
-        {
-            SpawnCar();
-            timer = 0;
-        }
+
+          if (timer > delay && delay > 1.2f)
+          {
+              SpawnCar();
+              timer = 0;
+          }
 
         Destroy(cloneCar, 5);
+        
     }
 }

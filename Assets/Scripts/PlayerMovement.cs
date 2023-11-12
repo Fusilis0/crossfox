@@ -5,8 +5,9 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
+    public Rigidbody rb;
 
-    public float speed = 6f;
+    public float speed;
     public float defaultSpeed;
     public float gravity = -9.81f;
 
@@ -19,13 +20,24 @@ public class PlayerMovement : MonoBehaviour
     Vector3 velocity;
     bool isGrounded;
 
-    /*Animator anim;
+    float timer;
+
+    Animator anim;
 
     void Start()
     {
         anim = GetComponent<Animator>();
     }
-    */
+
+    void OnCollisionExit(Collision collisionInfo)
+    {
+        if (collisionInfo.collider.tag == "car")
+        {
+            speed = 0f;
+            defaultSpeed = 0f;
+        }
+    }
+
 
     void Update()
     {
@@ -34,16 +46,21 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
+            
         }
+
+        //Game over when player fall down
+
+        if (rb.position.y < -2f) 
+        {
+            FindObjectOfType<GameManager>().GameOver();
+        }
+
+        //lower speed when jumping
 
         if (!isGrounded)
         {
             speed = defaultSpeed * 0.7f;
-        }
-
-        if (Input.GetKeyDown("s"))
-        {
-            speed = defaultSpeed * 0.5f;
         }
 
         if (isGrounded)
@@ -52,23 +69,34 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //animations
+        bool checkmove;
+        if (Input.GetButton("Vertical"))
+            checkmove = true;
+        else checkmove = false;
 
-        //float checkMove = Input.GetAxis("Vertical")*5;
-      //  anim.SetFloat("MovingSpeed", checkMove);
+        if (checkmove == true)
+            anim.SetBool("checkMove", true);
+        if (checkmove == false)
+            anim.SetBool("checkMove", false);
 
-        float x = 0f;
-        float z = Input.GetAxis("Vertical");
 
-        Vector3 move = transform.right * x + transform.forward * z;
-        
+        //movement
 
-        controller.Move(move * speed * Time.deltaTime);
+         float x = 0f;
+         float z = Input.GetAxisRaw("Vertical");
 
+         Vector3 move = transform.right * x + transform.forward * z;
+         controller.Move(move * speed * Time.deltaTime);
+
+
+        //jumping
 
         if (Input.GetButtonDown("Jump") && isGrounded )
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
+
+        // adds gravity
 
         velocity.y += gravity * Time.deltaTime;
 
