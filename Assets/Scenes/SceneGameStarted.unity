@@ -466,8 +466,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.9528302, g: 0.76441133, b: 0.4000089, a: 1}
+  m_Intensity: 1.01
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -476,10 +476,10 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
+    m_Strength: 0.94
+    m_Bias: 0.75
+    m_NormalBias: 0.28
+    m_NearPlane: 1.39
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -509,7 +509,7 @@ Light:
   m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 1.15
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -1419,18 +1419,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa1494bc54ea73b41bab144914d7e0e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1363511693}
---- !u!114 &1363511693 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2613690228732112811, guid: 7d1f706f3cc05e54dae61910501dd2b4, type: 3}
-  m_PrefabInstance: {fileID: 3821099846628565302}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 267645428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db200a57dfc740542a39ddadab32639a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1459341234

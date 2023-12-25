@@ -26,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 344d33e51fe319c4c9568dabc486c3ff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.213
+      value: 2.16
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 344d33e51fe319c4c9568dabc486c3ff, type: 3}
       propertyPath: m_LocalPosition.z
@@ -81,10 +81,10 @@ PrefabInstance:
       addedObject: {fileID: 6056695459145663558}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 344d33e51fe319c4c9568dabc486c3ff, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8837717806876237914}
+      addedObject: {fileID: 5879387675119420144}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 344d33e51fe319c4c9568dabc486c3ff, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5879387675119420144}
+      addedObject: {fileID: 9014693540362918289}
   m_SourcePrefab: {fileID: 100100000, guid: 344d33e51fe319c4c9568dabc486c3ff, type: 3}
 --- !u!1 &7633774425180190568 stripped
 GameObject:
@@ -111,15 +111,29 @@ Rigidbody:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_ImplicitCom: 1
+  m_ImplicitCom: 0
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 96
+  m_Constraints: 120
   m_CollisionDetection: 0
---- !u!64 &8837717806876237914
-MeshCollider:
+--- !u!114 &5879387675119420144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7633774425180190568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b30b8439aa45c384496b8521f999f2e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 6056695459145663558}
+  carSpeed: 8
+--- !u!136 &9014693540362918289
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -136,21 +150,8 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 5130404806339704038, guid: 344d33e51fe319c4c9568dabc486c3ff, type: 3}
---- !u!114 &5879387675119420144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7633774425180190568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b30b8439aa45c384496b8521f999f2e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 6056695459145663558}
-  carSpeed: 0.8
+  serializedVersion: 2
+  m_Radius: 0.84
+  m_Height: 4.27
+  m_Direction: 2
+  m_Center: {x: 0, y: -0.12, z: 0}

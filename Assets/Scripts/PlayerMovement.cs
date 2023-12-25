@@ -38,6 +38,17 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    bool MoveState()
+    {
+        if (Input.GetAxisRaw("Vertical") != 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 
     void Update()
     {
@@ -70,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
 
         //animations
         bool checkmove;
-        if (Input.GetButton("Vertical"))
+        if (MoveState())
             checkmove = true;
         else checkmove = false;
 

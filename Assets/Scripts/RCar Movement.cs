@@ -9,9 +9,13 @@ public class RCarMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
     }
+    public void Move()
+    {
+        rb.velocity += transform.forward * carSpeed * Time.deltaTime;
+    }
 
     void Update()
     {
-        rb.AddForce(-carSpeed, 0, 0);
+        Move();
     }
 }

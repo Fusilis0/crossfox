@@ -10,36 +10,24 @@ public class RCarSpawner : MonoBehaviour
     public GameObject car6;
     public GameObject cloneCar;
 
-    public float destroyDelay = 5;
-    float timer;
-
     void SpawnCarR()
     {
-        float carNumber = Random.value;
-        if (carNumber < 0.33f)
+        float carNumber = Random.Range(1, 4);
+        if (carNumber == 1)
             cloneCar = Instantiate(car4, CarPos.position, CarPos.rotation);
-        if (carNumber > 0.33f && carNumber < 0.66f)
+        if (carNumber == 2)
             cloneCar = Instantiate(car5, CarPos.position, CarPos.rotation);
-        if (carNumber > 0.66f)
+        if (carNumber == 3)
             cloneCar = Instantiate(car6, CarPos.position, CarPos.rotation);
     }
 
     void Start()
     {
-        
+        InvokeRepeating(nameof(SpawnCarR), Random.Range(0, 3), Random.Range(2, 8));
     }
 
     void Update()
     {
-        float delay = 1000 * Random.value;
-        timer += Time.deltaTime;
-
-        if (timer > delay && delay > 1.2f)
-        {
-            SpawnCarR();
-            timer = 0;
-        }
-
         Destroy(cloneCar, 5);
     }
 }

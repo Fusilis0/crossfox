@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 2287932295484416269}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7053413, z: -0, w: -0.7088679}
-  m_LocalPosition: {x: 0.45, y: 1, z: 0.25}
+  m_LocalPosition: {x: 0.45, y: 1.5, z: 0.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -49,7 +49,6 @@ MonoBehaviour:
   car5: {fileID: 556220784308193387, guid: cffd0581de9f1ae4db99b6233fefb213, type: 3}
   car6: {fileID: 7633774425180190568, guid: e2937689e81ccc04888cb9d5e67adb6c, type: 3}
   cloneCar: {fileID: 0}
-  destroyDelay: 5
 --- !u!1 &4727589015149958617
 GameObject:
   m_ObjectHideFlags: 0
@@ -76,7 +75,7 @@ Transform:
   m_GameObject: {fileID: 4727589015149958617}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.72601074, z: -0, w: 0.6876835}
-  m_LocalPosition: {x: -0.45, y: 1, z: -0.25}
+  m_LocalPosition: {x: -0.45, y: 1.5, z: -0.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -99,7 +98,6 @@ MonoBehaviour:
   car2: {fileID: 8757735685040294101, guid: 146c270dcd6391d40b199666634d9968, type: 3}
   car3: {fileID: 7633774425180190568, guid: fc9738a45201c654cafb0c06b65bb723, type: 3}
   cloneCar: {fileID: 0}
-  destroyDelay: 5
 --- !u!1 &5743603172719837096
 GameObject:
   m_ObjectHideFlags: 0

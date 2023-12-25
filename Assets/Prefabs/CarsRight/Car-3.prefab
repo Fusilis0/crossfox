@@ -26,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 830690d5c1cddc44ea920740a956d0b1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.345
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 830690d5c1cddc44ea920740a956d0b1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -77,10 +77,10 @@ PrefabInstance:
       addedObject: {fileID: 8147384246081249443}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 830690d5c1cddc44ea920740a956d0b1, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7803761280327085389}
+      addedObject: {fileID: 5097987665080185362}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 830690d5c1cddc44ea920740a956d0b1, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5097987665080185362}
+      addedObject: {fileID: 5930596446988374941}
   m_SourcePrefab: {fileID: 100100000, guid: 830690d5c1cddc44ea920740a956d0b1, type: 3}
 --- !u!1 &8757735685040294101 stripped
 GameObject:
@@ -109,33 +109,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 0
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 96
+  m_Constraints: 124
   m_CollisionDetection: 0
---- !u!64 &7803761280327085389
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8757735685040294101}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -4591569700116761570, guid: 830690d5c1cddc44ea920740a956d0b1, type: 3}
 --- !u!114 &5097987665080185362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,4 +127,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 8147384246081249443}
-  carSpeed: 1.4
+  carSpeed: 12
+--- !u!136 &5930596446988374941
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8757735685040294101}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.47
+  m_Height: 3.79
+  m_Direction: 2
+  m_Center: {x: 0, y: 0.02, z: 0.03}
