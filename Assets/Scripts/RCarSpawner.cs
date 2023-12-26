@@ -9,6 +9,7 @@ public class RCarSpawner : MonoBehaviour
     public GameObject car5;
     public GameObject car6;
     public GameObject cloneCar;
+    public float CarLifetime;
 
     void SpawnCarR()
     {
@@ -26,8 +27,13 @@ public class RCarSpawner : MonoBehaviour
         InvokeRepeating(nameof(SpawnCarR), Random.Range(0, 3), Random.Range(2, 8));
     }
 
+    void CarDestroyer()
+    {
+        Destroy(cloneCar, CarLifetime);
+    }
+
     void Update()
     {
-        Destroy(cloneCar, 5);
+        CarDestroyer();
     }
 }
